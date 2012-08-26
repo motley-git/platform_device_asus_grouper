@@ -28,7 +28,7 @@ DEVICE_PACKAGE_OVERLAYS := \
 
 PRODUCT_PROPERTY_OVERRIDES := \
     wifi.interface=wlan0 \
-    wifi.supplicant_scan_interval=15 \
+    wifi.supplicant_scan_interval=90 \
     tf.enable=y \
     drm.service.enabled=true \
     ro.carrier=wifi-only
@@ -93,7 +93,8 @@ PRODUCT_PACKAGES := \
     hcitool \
     bttest \
     com.android.future.usb.accessory \
-    whisperd
+    whisperd \
+    CameraLauncher
 
 # for bugmailer
 PRODUCT_PACKAGES += send_bug
@@ -109,6 +110,11 @@ PRODUCT_PACKAGES += \
     Nfc \
     Tag \
     com.android.nfc_extras
+
+# Superuser\busybox
+PRODUCT_PACKAGES += \
+	Superuser \
+	busybox
 
 PRODUCT_CHARACTERISTICS := tablet,nosdcard
 
